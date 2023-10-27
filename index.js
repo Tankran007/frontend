@@ -8,8 +8,8 @@ const path = require("path");
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
-// const base_url = "http://localhost:5500";
-const base_url = "https://env-4456716.proen.app.ruk-com.cloud";
+//  const base_url = "http://localhost:5500";
+const base_url ="https://node50302-tankran.proen.app.ruk-com.cloud";
 
 // Set the template engine
 app.set("views", path.join(__dirname,"/public/views"));
@@ -86,10 +86,10 @@ app.post("/inab", async (req, res) => {
   app.get("/", async (req, res) => {
     try {
       const musicalbum = await axios.get(base_url + '/iu');
-      const musicformatdata = await axios.get(base_url + '/yuo');
-      const musicdata = await axios.get(base_url + '/test');
-      const Composerdata = await axios.get(base_url + '/com');
-        res.render("test", {  musicalbum: musicalbum.data,musicformat: musicformatdata.data, music: musicdata.data, Composer:Composerdata.data});
+      // const musicformatdata = await axios.get(base_url + '/yuo');
+      // const musicdata = await axios.get(base_url + '/test');
+      // const Composerdata = await axios.get(base_url + '/com');
+        res.render("test", {  musicalbum: musicalbum.data});
     } catch (err) {
         console.error(err);
         res.status(500).send('Error');
