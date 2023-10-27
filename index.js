@@ -8,8 +8,8 @@ const path = require("path");
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
-const base_url = "http://localhost:5500";
-//const base_url = "http://node41091-noderest.proen.app.ruk-com.cloud";
+// const base_url = "http://localhost:5500";
+const base_url = "https://env-4456716.proen.app.ruk-com.cloud";
 
 // Set the template engine
 app.set("views", path.join(__dirname,"/public/views"));
@@ -326,6 +326,6 @@ app.get("/delete3/:id", async (req, res) => {
 //    console.log('Server started on port 8080');
 //});
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(3100, () => {
+  console.log('Server started on port 3100');
 });
