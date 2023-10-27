@@ -1,0 +1,34 @@
+<!-- books.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Name</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Music Name</h1>
+  <table class="book-table">
+    <tr>
+      <th>id_mus</th>
+      <th>Music_Name</th>
+      <th>Actions</th>
+      
+    </tr>
+    <% for(var i=0; i < music.length; i++) { %>
+    <tr>
+      <td><%= music[i].id_mus %></td>
+      <td><%= music[i].music_name %></td>
+      
+      <td>
+        <a href="/updatems/<%= music[i].id_mus %>">Edit</a>
+        <a href="/delete2/<%= music[i].id_mus %>">Delete</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <a href="/">Back to MusicAlbum</a>
+    <a href="/inab3">Create New Music</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- create.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Composer</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Update Composer</h1>
+    <form method="post" action="/updatecps/<%=composer.id_com%>">
+      <label >COMPOSER:</label>
+      <input type="text" id="composer_name" name="composer_name" />
+      <br />
+      
+      <input type="submit" value="update" />
+    </form>
+    <div class="link-center">
+      <a href="/cps">Back to List Composer</a>
+    </div>
+  </body>
+</html>

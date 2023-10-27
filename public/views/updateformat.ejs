@@ -1,0 +1,21 @@
+<!-- create.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Music format</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Update Music format</h1>
+    <form method="post" action="/updatefm/<%=musicformat.id_fom%>">
+      <label >MUSICFORMAT:</label>
+      <input type="text" id="musicformat" name="musicformat" />
+      <br />
+      
+      <input type="submit" value="update" />
+    </form>
+    <div class="link-center">
+      <a href="/formatview">Back to List Music format</a>
+    </div>
+  </body>
+</html>

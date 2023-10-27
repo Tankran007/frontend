@@ -1,0 +1,34 @@
+<!-- books.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music format</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Music format</h1>
+  <table class="book-table">
+    <tr>
+      <th>id_fom</th>
+      <th>Musicformat</th>
+      <th>Actions</th>
+      
+    </tr>
+    <% for(var i=0; i < musicformat.length; i++) { %>
+    <tr>
+      <td><%= musicformat[i].id_fom %></td>
+      <td><%= musicformat[i].musicformat %></td>
+      
+      <td>
+        <a href="/updatefm/<%= musicformat[i].id_fom %>">Edit</a>
+        <a href="/delete3/<%= musicformat[i].id_fom %>">Delete</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <a href="/">Back to MusicAlbum</a>
+    <a href="/inab4">Create New Music format</a>
+  </div>
+</body>
+</html>

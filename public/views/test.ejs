@@ -1,0 +1,40 @@
+<!-- books.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicAlbum</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>MusicAlbum</h1>
+    <table class="book-table">
+      <tr>
+        <th>Musicformat<a href="/formatview"> <font face = "Open Sans" color=" pink">List </font></a></th>
+        <th>Musicname <a href="/msn"> <font face = "Open Sans" color=" pink">List </font> </a></th>
+        <th>Composername <a href="/cps"> <font face = "Open Sans" color=" pink">List </font></a></th>
+        <th>Actions</th>
+      </tr>
+      <% for(var i=0; i < musicalbum.length; i++) { %>
+        <tr>
+          <td><%= musicalbum[i].musicformat %></td>
+          <td><%= musicalbum[i].music%></td>
+          <td><%= musicalbum[i].Composer %></td>
+
+          <td>
+            <a href="/viewalbum?id1=<%=musicalbum[i].musicformat%>&id2=<%=musicalbum[i].music%>&id3=<%=musicalbum[i].Composer%>">view</a>
+            <a href="/updateab/<%= musicalbum[i].musicID %>">Edit</a>
+            <a href="/delete/<%= musicalbum[i].musicID %>">Delete</a>
+          </td>
+        </tr>
+      <% } %>
+    </table>
+    
+    <div class="link-center">
+      <br>
+      <br>
+      <br>
+      
+      <a href="/inab">Create MusicAlbum</a>
+    </div>
+  </body>
+  </html>

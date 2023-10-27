@@ -1,0 +1,34 @@
+<!-- books.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Composer Name</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Composer Name</h1>
+  <table class="book-table">
+    <tr>
+      <th>id_com</th>
+      <th>Composer_Name</th>
+      <th>Actions</th>
+      
+    </tr>
+    <% for(var i=0; i < composers.length; i++) { %>
+    <tr>
+      <td><%= composers[i].id_com %></td>
+      <td><%= composers[i].composer_name %></td>
+      
+      <td>
+        <a href="/updatecps/<%= composers[i].id_com %>">Edit</a>
+        <a href="/delete1/<%= composers[i].id_com %>">Delete</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <a href="/">Back to MusicAlbum</a>
+    <a href="/inab2">Create New Composer</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- create.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>update Music Name</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Music Name</h1>
+    <form method="post" action="/updatems/<%=music.id_mus%>">
+      <label >MUSIC NAME:</label>
+      <input type="text" id="music_name" name="music_name" />
+      <br />
+      
+      <input type="submit" value="update" />
+    </form>
+    <div class="link-center">
+      <a href="/msn">Back to List Music Name</a>
+    </div>
+  </body>
+</html>
