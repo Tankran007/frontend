@@ -8,8 +8,8 @@ const path = require("path");
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
-//  const base_url = "http://localhost:5500";
-const base_url ="http://node53590-env-8352806.proen.app.ruk-com.cloud";
+ const base_url = "http://localhost:5600";
+// const base_url ="http://node53590-env-8352806.proen.app.ruk-com.cloud";
 
 // Set the template engine
 app.set("views", path.join(__dirname,"/public/views"));
@@ -24,10 +24,10 @@ app.use(express.static(__dirname + "/public"));
 app.get("/viewalbum", async (req, res) => {
   try {
 
-      const formatname = await axios.get(base_url + '/yuo/'+req.query.id1);
-      const musicname = await axios.get(base_url + '/test/'+req.query.id2);
-      const composername = await axios.get(base_url + '/com/'+req.query.id3);
-      res.render("viewalbum", { musicformat: formatname.data, music: musicname.data, Composer:composername.data });
+      // const formatname = await axios.get(base_url + '/yuo/'+req.query.id1);
+      // const musicname = await axios.get(base_url + '/test/'+req.query.id2);
+      // const composername = await axios.get(base_url + '/com/'+req.query.id3);
+      res.render("viewalbum", { musicformat: req.query.id1, music: req.query.id2, Composer:req.query.id3 });
   } catch (err) {
       console.error(err);
       res.status(500).send('Error');
@@ -86,10 +86,11 @@ app.post("/inab", async (req, res) => {
   app.get("/", async (req, res) => {
     try {
       const musicalbum = await axios.get(base_url + '/iu');
-      // const musicformatdata = await axios.get(base_url + '/yuo');
-      // const musicdata = await axios.get(base_url + '/test');
-      // const Composerdata = await axios.get(base_url + '/com');
-        res.render("test", {  musicalbum: musicalbum.data});
+      const musicformatdata = await axios.get(base_url + '/yuo');
+      const musicdata = await axios.get(base_url + '/test');
+      const Composerdata = await axios.get(base_url + '/com');
+
+      res.render("test", {  musicalbum: musicalbum.data, musicformat: musicformatdata.data, music: musicdata.data, Composer:Composerdata.data});
     } catch (err) {
         console.error(err);
         res.status(500).send('Error');
