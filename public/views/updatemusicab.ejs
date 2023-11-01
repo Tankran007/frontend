@@ -13,7 +13,7 @@
       <select name="musicformat" >
         <!-- ทำให้การเลือก shelf เป็นแบบ select เพื่อป้องกันไม่ให้เลือก shelf ที่ไม่มีอยู่ในระบบ -->
         <% for(var i=0; i < musicformat.length; i++) { %> 
-        <option value="<%= musicformat[i].id_fom %>">ID format : <%= musicformat[i].id_fom %> musicformatDATA : <%= musicformat[i].musicformat %></option>
+        <option value="<%= musicformat[i].musicformat %>">ID format : <%= musicformat[i].id_fom %> musicformatDATA : <%= musicformat[i].musicformat %></option>
         <% } %>
         
 
@@ -26,7 +26,7 @@
       <select name="music" >
         <!-- ทำให้การเลือก shelf เป็นแบบ select เพื่อป้องกันไม่ให้เลือก shelf ที่ไม่มีอยู่ในระบบ -->
         <% for(var i=0; i < music.length; i++) { %> 
-        <option value="<%= music[i].id_mus %>">ID mus : <%= music[i].id_mus %> music : <%= music[i].music_name %></option>
+        <option value="<%= music[i].music_name %>">ID mus : <%= music[i].id_mus %> music : <%= music[i].music_name %></option>
         <% } %>
         
 
@@ -38,7 +38,7 @@
       <select name="Composer" >
         <!-- ทำให้การเลือก shelf เป็นแบบ select เพื่อป้องกันไม่ให้เลือก shelf ที่ไม่มีอยู่ในระบบ -->
         <% for(var i=0; i < Composer.length; i++) { %> 
-        <option value="<%= Composer[i].id_com %>">ID com : <%= Composer[i].id_com %> Composer : <%= Composer[i].composer_name %></option>
+        <option value="<%= Composer[i].composer_name %>">ID com : <%= Composer[i].id_com %> Composer : <%= Composer[i].composer_name %></option>
         <% } %>
     </select>
       <br />
