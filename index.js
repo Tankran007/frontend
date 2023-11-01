@@ -8,8 +8,8 @@ const path = require("path");
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
- const base_url = "http://localhost:5600";
-// const base_url ="http://node53590-env-8352806.proen.app.ruk-com.cloud";
+//  const base_url = "http://localhost:5600";
+const base_url ="http://node53590-env-8352806.proen.app.ruk-com.cloud";
 
 // Set the template engine
 app.set("views", path.join(__dirname,"/public/views"));
